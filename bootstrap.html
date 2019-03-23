@@ -11,9 +11,9 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-
     <link rel="stylesheet" href="./styles/bootstrapstly.css" />
     <title>bootstrap實作</title>
+
 </head>
 
 <body>
@@ -328,31 +328,72 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <nav class="nav nav-pills nav-justified">
-                        <a class="nav-link active" href="#">登入</a>
-                        <a class="nav-link" href="#">註冊</a>
+                        <ul class="nav nav-pills mb-1" id="pills-tab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#sign-in"
+                                    role="tab" aria-controls="pills-home" aria-selected="true">登入</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#sign-up"
+                                    role="tab" aria-controls="pills-profile" aria-selected="false">註冊</a>
+                            </li>
+                        </ul>
                     </nav>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form>
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Email</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1"
-                                aria-describedby="emailHelp" placeholder="請輸入email">
-                        </div>
-                        <div class="form-group mb-0">
-                            <label for="exampleInputPassword1">密碼</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="請輸入密碼">
-                            <small id="emailHelp" class="form-text text-muted">6~30個英數字元，分大小寫</small>
-                        </div>
-                        <div class="mb-3">
-                                <a href="#">登入註冊</a>│<a href="#">忘記密碼</a>
-                        </div>
-                        <button type="submit" class="btn btn-success btn-block ">登入</button>
-
-                    </form>
+                    <div class="tab-content" id="pills-tabContent">
+                        <form class="tab-pane fade show active" id="sign-in" role="tabpanel"
+                            aria-labelledby="pills-home-tab">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" placeholder="請輸入email">
+                            </div>
+                            <div class="form-group mb-0">
+                                <label for="exampleInputPassword1">密碼</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1"
+                                    placeholder="請輸入密碼">
+                                <small id="emailHelp" class="form-text text-muted">6~30個英數字元，分大小寫</small>
+                            </div>
+                            <div class="mb-4 mt-3">
+                                <a href="#" class="mr-2">Email登入</a>│<a href="#" class="ml-2">忘記密碼</a>
+                            </div>
+                            <button type="submit" class="btn btn-success btn-block ">登入</button>
+                        </form>
+                        <form class="tab-pane fade" id="sign-up" role="tabpanel"
+                            aria-labelledby="pills-profile-tab">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" placeholder="請輸入email">
+                            </div>
+                            <div class="form-group mb-0">
+                                <label for="exampleInputPassword1">密碼</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1"
+                                    placeholder="請輸入密碼">
+                                <small id="emailHelp" class="form-text text-muted">6~30個英數字元，分大小寫</small>
+                            </div>
+                            <div class="mt-2">
+                                <label for="exampleInputPassword2" >再次輸入密碼</label>
+                                <input type="password" class="form-control" id="exampleInputPassword2"
+                                    placeholder="請再次輸入輸入密碼">
+                            </div>
+                            <div class="mt-3 mb-3">
+                                <label for="user-name" >姓名</label>
+                                <input type="text" class="form-control" id="user-name" placeholder="請輸入姓名">
+                            </div>
+                            <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">我已閱讀並同意信義房屋網站的
+                                    <a href="#">服務條款</a>與<a href="#">隱私權聲明</a>
+                                </label>
+                            </div>
+                            <button type="submit" class="btn btn-success btn-block ">註冊</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
